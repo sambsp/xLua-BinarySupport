@@ -1,4 +1,4 @@
-# Install script for directory: D:/research/xLua/build/luac
+# Install script for directory: D:/research/xLua-BinarySupport/build/luac
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "D:/research/xLua/build/luac/build64/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "D:/research/xLua-BinarySupport/build/luac/build64/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

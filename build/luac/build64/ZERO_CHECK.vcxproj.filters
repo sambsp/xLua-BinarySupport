@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <CustomBuild Include="D:\research\xLua\build\luac\build64\CMakeFiles\e71c465be6549bd72c2bf4a3985ee8a4\generate.stamp.rule">
+    <CustomBuild Include="D:\research\xLua-BinarySupport\build\luac\build64\CMakeFiles\b1ced9ae474df4c152ad2871fc7e05c2\generate.stamp.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="CMake Rules">
-      <UniqueIdentifier>{8D2462EC-3BD0-3169-AA23-A8C4632CBD7F}</UniqueIdentifier>
+      <UniqueIdentifier>{CF44CA76-B2AC-3718-9347-3BDBFCFEF52D}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
