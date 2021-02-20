@@ -37,6 +37,12 @@ x86_64目标 （Windows）
 armeabi_v7a目标（Android）
 x86目标 （Android）
 
+-----2021/02/20-----
+
+luac.exe(win64）是自定义的了，成功
+x86_64(windows) 是自定义的了，成功
+android正在验证
+
 
 
 

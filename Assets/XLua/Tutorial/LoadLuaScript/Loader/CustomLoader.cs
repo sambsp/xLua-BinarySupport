@@ -9,29 +9,22 @@
 using UnityEngine;
 using System.Collections;
 using XLua;
+using System.IO;
 
 namespace Tutorial
 {
     public class CustomLoader : MonoBehaviour
     {
-        LuaEnv luaenv = null;
-        // Use this for initialization
-        void Start()
+        public LuaEnv luaenv = null;
+
+        void Awake()
         {
+            SaveTextToPersistent();
+
             luaenv = new LuaEnv();
-            luaenv.AddLoader((ref string filename) =>
-            {
-                if (filename == "InMemory")
-                {
-                    string script = "return {ccc = 9999}";
-                    return System.Text.Encoding.UTF8.GetBytes(script);
-                }
-                return null;
-            });
-            luaenv.DoString("print('InMemory.ccc=', require('InMemory').ccc)");
+            luaenv.AddLoader(MyLoader);
         }
 
-        // Update is called once per frame
         void Update()
         {
             if (luaenv != null)
@@ -43,6 +36,23 @@ namespace Tutorial
         void OnDestroy()
         {
             luaenv.Dispose();
+        }
+
+        private static byte[] MyLoader(ref string fileName)
+        {
+#if UNITY_EDITOR
+            string folder = Path.Combine(Application.dataPath, "Lua");
+#else
+            string folder = Path.Combine(Application.persistentDataPath, "Lua");
+#endif
+            string path = Path.Combine(folder, fileName + ".lua");
+
+            return File.ReadAllBytes(path);
+        }
+
+        private void SaveTextToPersistent()
+        {
+            File.WriteAllText(Application.persistentDataPath + "/1.txt", "helloworld");
         }
     }
 }
